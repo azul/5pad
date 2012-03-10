@@ -155,8 +155,8 @@ function Ace2Editor()
     return {embeded: embededFiles, remote: remoteFiles};
   }
   function pushRequireScriptTo(buffer) {
-    var KERNEL_SOURCE = '../static/js/require-kernel.js';
-    var KERNEL_BOOT = 'require.setRootURI("../minified/");\nrequire.setGlobalKeyPath("require");'
+    var KERNEL_SOURCE = '/js/require-kernel.js';
+    var KERNEL_BOOT = 'require.setRootURI("/js/");\nrequire.setGlobalKeyPath("require");'
     if (Ace2Editor.EMBEDED && Ace2Editor.EMBEDED[KERNEL_SOURCE]) {
       buffer.push('<script type="text/javascript">');
       buffer.push(Ace2Editor.EMBEDED[KERNEL_SOURCE]);
@@ -167,7 +167,7 @@ function Ace2Editor()
   function pushScriptsTo(buffer) {
     /* Folling is for packaging regular expression. */
     /* $$INCLUDE_JS("../minified/ace2_inner.js?callback=require.define"); */
-    var ACE_SOURCE = '../minified/ace2_inner.js?callback=require.define';
+    var ACE_SOURCE = '/js/ace2_inner.js?callback=require.define';
     if (Ace2Editor.EMBEDED && Ace2Editor.EMBEDED[ACE_SOURCE]) {
       buffer.push('<script type="text/javascript">');
       buffer.push(Ace2Editor.EMBEDED[ACE_SOURCE]);
@@ -245,9 +245,9 @@ function Ace2Editor()
       // these lines must conform to a specific format because they are passed by the build script:      
       var includedCSS = [];
       var $$INCLUDE_CSS = function(filename) {includedCSS.push(filename)};
-      $$INCLUDE_CSS("../static/css/iframe_editor.css");
-      $$INCLUDE_CSS("../static/css/pad.css");
-      $$INCLUDE_CSS("../static/custom/pad.css");
+      $$INCLUDE_CSS("/css/iframe_editor.css");
+      $$INCLUDE_CSS("/css/pad.css");
+      $$INCLUDE_CSS("/custom/pad.css");
       pushStyleTagsFor(iframeHTML, includedCSS);
 
       var includedJS = [];
@@ -278,9 +278,9 @@ function Ace2Editor()
 
       var includedCSS = [];
       var $$INCLUDE_CSS = function(filename) {includedCSS.push(filename)};
-      $$INCLUDE_CSS("../static/css/iframe_editor.css");
-      $$INCLUDE_CSS("../static/css/pad.css");
-      $$INCLUDE_CSS("../static/custom/pad.css");
+      $$INCLUDE_CSS("/css/iframe_editor.css");
+      $$INCLUDE_CSS("/css/pad.css");
+      $$INCLUDE_CSS("/custom/pad.css");
       pushStyleTagsFor(outerHTML, includedCSS);
 
       // bizarrely, in FF2, a file with no "external" dependencies won't finish loading properly
