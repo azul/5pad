@@ -172,10 +172,10 @@ a#backtoprosite, #accountnav {
 a#backtoprosite, #accountnav a { color: #cde7ff; text-decoration: underline; }
 
 a#backtoprosite { padding-left: 20px; left: 6px;
-  background: url(static/img/protop.gif) no-repeat -5px -6px; }
+  background: url(/img/protop.gif) no-repeat -5px -6px; }
 #accountnav { right: 30px; color: #fff; }
   
-.propad a#topbaretherpad { background: url(static/img/protop.gif) no-repeat -397px -3px; }
+.propad a#topbaretherpad { background: url(/img/protop.gif) no-repeat -397px -3px; }
 
 #specialkeyarea { top: 5px; left: 250px; color: yellow; font-weight: bold;
   font-size: 1.5em; position: absolute; }
@@ -201,7 +201,7 @@ a#hidetopmsg { position: absolute; right: 5px; bottom: 5px; }
   background: #ffc; padding: 0.6em; font-size: 1.2em; margin-top: 6px; }
 
 #docbar { margin-top: 6px; height: 25px; position: relative; zoom: 1;
-  background: #fbfbfb url(static/img/padtopback2.gif) repeat-x 0 -31px; }
+  background: #fbfbfb url(/img/padtopback2.gif) repeat-x 0 -31px; }
 
 .docbarbutton
 {
@@ -250,7 +250,7 @@ a#hidetopmsg { position: absolute; right: 5px; bottom: 5px; }
 
 #docbarleft { position: absolute; left: 0; top: 0; height: 100%;
   overflow: hidden;
-  background: url(static/img/padtop5.gif) no-repeat left -31px; width: 7px; }
+  background: url(/img/padtop5.gif) no-repeat left -31px; width: 7px; }
 
 
   
@@ -260,7 +260,7 @@ a#hidetopmsg { position: absolute; right: 5px; bottom: 5px; }
   overflow: hidden; text-overflow: ellipsis /*not supported in FF*/;
   white-space:nowrap; }
 .docbar-public #docbarpadtitle { padding-left: 22px;
-  background: url(static/img/public.gif) no-repeat left center; }
+  background: url(/img/public.gif) no-repeat left center; }
   
 #docbarrenamelink { position: absolute; top: 6px;
   font-size: 1.1em; display: none; }
@@ -268,7 +268,7 @@ a#hidetopmsg { position: absolute; right: 5px; bottom: 5px; }
 #docbarrenamelink a:hover { color: #48d; }
 #padtitlebuttons { position: absolute; width: 74px; zoom: 1;
   height: 17px; top: 4px; left: 170px; display: none;
-  background: url(static/img/ok_or_cancel.gif) 0px 0px; }
+  background: url(/img/ok_or_cancel.gif) 0px 0px; }
 #padtitlesave { position: absolute; display: block;
   height: 0; padding-top: 17px; overflow: hidden;
   width: 23px; left: 0; top: 0; }
@@ -304,10 +304,10 @@ a#hidetopmsg { position: absolute; right: 5px; bottom: 5px; }
 .hidesidebar #padeditor { right: 0; }
 
 #vdraggie {
-/*  background: url(static/img/vdraggie.gif) no-repeat top center;*/
+/*  background: url(/img/vdraggie.gif) no-repeat top center;*/
   width:16px;
   height:16px;
-  background-image:url('../../static/img/etherpad_lite_icons.png');
+  background-image:url('/img/etherpad_lite_icons.png');
   background-repeat: no-repeat;
   background-position: 0px -300px;
 
@@ -454,7 +454,7 @@ table#otheruserstable { display: none; }
   
 .modaldialog.cboxreconnecting .modaldialog-inner,
 .modaldialog.cboxconnecting .modaldialog-inner {
-  background: url(../../static/img/connectingbar.gif) no-repeat center 60px;
+  background: url(/img/connectingbar.gif) no-repeat center 60px;
   height: 100px;
 }
 .modaldialog.cboxreconnecting, 
@@ -556,7 +556,7 @@ table#otheruserstable { display: none; }
 
 .expand-collapse {
   height: 22px;
-  background-image: url(static/img/sharedistri.gif);
+  background-image: url(/img/sharedistri.gif);
   background-repeat: no-repeat;
   background-position: 0 3px;
   padding-left: 17px;
@@ -584,7 +584,7 @@ table#otheruserstable { display: none; }
 .modaldialog .modaldialog-hide {
   float: right;
   background-repeat: no-repeat;
-  background-image: url(static/img/sharebox4.gif);
+  background-image: url(/img/sharebox4.gif);
   display: block;
   width: 22px; height: 22px;
   background-position: -454px -6px;
@@ -617,7 +617,7 @@ table#otheruserstable { display: none; }
 #sharebox-send {
   float: right;
   background-repeat: no-repeat;
-  background-image: url(static/img/sharebox4.gif);
+  background-image: url(/img/sharebox4.gif);
   display: block;
   width: 87px; height: 22px;
   background-position: -383px -289px;
@@ -644,20 +644,20 @@ table#otheruserstable { display: none; }
   color: #444;
 }
 #widthprefcheck { position: absolute;
-  background-image: url(static/img/layoutbuttons.gif);
+  background-image: url(/img/layoutbuttons.gif);
   background-repeat: no-repeat; cursor: pointer;
   width: 86px; height: 20px; top: 4px; right: 2px; }
 .widthprefunchecked { background-position: -1px -1px; }
 .widthprefchecked { background-position: -1px -23px; }
 #sidebarcheck { position: absolute;
-  background-image: url(static/img/layoutbuttons.gif);
+  background-image: url(/img/layoutbuttons.gif);
   background-repeat: no-repeat; cursor: pointer;
   width: 86px; height: 20px; top: 4px; right: 90px; }
 .sidebarunchecked { background-position: -1px -45px; }
 .sidebarchecked { background-position: -1px -67px; }
 #feedbackbutton { display: block; position: absolute; width: 68px;
   height: 0; padding-top: 17px; overflow: hidden;
-  background: url(static/img/bottomareagfx.gif);
+  background: url(/img/bottomareagfx.gif);
   top: 5px; right: 220px;
 }
 
@@ -681,11 +681,11 @@ a#topbarmaximize {
  height: 16px;
  margin-right:-143px;
  margin-top:4px;
- background: url(static/img/maximize_normal.png);
+ background: url(/img/maximize_normal.png);
 }
 
 .maximized a#topbarmaximize {
- background: url(static/img/maximize_maximized.png);
+ background: url(/img/maximize_maximized.png);
 }
 
 #editbarinner h1 {
@@ -884,7 +884,7 @@ ul#colorpickerswatches li:hover
   margin-top: 2px;
   background-repeat:no-repeat;
   padding-left:25px;
-  background-image: url("../../static/img/etherpad_lite_icons.png");
+  background-image: url("/img/etherpad_lite_icons.png");
   color:#fff;
   text-decoration:none;
 }
@@ -974,7 +974,7 @@ opacity:.8;
 .buttonicon{
 width:16px;
 height:16px;
-background-image:url('../../static/img/etherpad_lite_icons.png');
+background-image:url('/img/etherpad_lite_icons.png');
 background-repeat: no-repeat;
 margin-left: 1px;
 margin-top: 1px;
