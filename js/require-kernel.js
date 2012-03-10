@@ -312,7 +312,7 @@ var require = (function () {
     // If cross domain and request doesn't support such requests, go straight
     // to mirroring.
 
-    var _globalKeyPath = globalKeyPath;
+    var _globalKeyPath = false;
 
     var callback = function (error, text) {
       if (error) {
