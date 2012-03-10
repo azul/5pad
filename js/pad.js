@@ -488,6 +488,8 @@ var pad = {
     pad.collabClient.setOnChannelStateChange(pad.handleChannelStateChange);
     pad.collabClient.setOnInternalAction(pad.handleCollabAction);
 
+    require.setGlobalKeyPath("require");
+
     function postAceInit()
     {
       padeditbar.init();
