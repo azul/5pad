@@ -24,6 +24,7 @@
 
 var socket;
 
+require.setRootURI("/js/");
 require('/farbtastic');
 require('/excanvas');
 JSON = require('/json2');
