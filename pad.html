@@ -265,7 +265,6 @@
             var clientVars = {};
             (function () {
               require.setRootURI("/js/");
-//              require.setGlobalKeyPath("require");
               //require('/pad').init();
 
               var padutils = require('/pad_utils').padutils;
@@ -283,6 +282,7 @@
               chat = require('/chat').chat;
               padeditbar = require('/pad_editbar').padeditbar;
               padimpexp = require('/pad_impexp').padimpexp;
+              require.setGlobalKeyPath("require");
             }());
         </script>
         
