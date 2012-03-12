@@ -256,32 +256,9 @@
             
         </div>
 
-        <script type="text/javascript" src="js/require-kernel.js"></script>
-        <script type="text/javascript" src="js/socket.io.js"></script>
+        <script type="text/javascript" src="js/require.js" data-main="main.js"></script>
         <script type="text/javascript">
-            var clientVars = {};
-            (function () {
-             require.setRootURI("/js/");
-             require.setLibraryURI("http://surf.unhosted.org:82/");
-             require.setGlobalKeyPath("require");
-              //require('/pad').init();
-
-              // var padutils = require('/pad_utils').padutils;
-
-              // padutils.setupGlobalExceptionHandler();
-
-              pad = require('/pad');
-              $(document).ready(function()
-                {
-                // require('/pad').getParams();
-                pad.handshake('http://surf.unhosted.org:82','socket.io', 'azul@5apps.com$testing-things');
-                });
-
-              /* TODO: These globals shouldn't exist. */
-              chat = require('/chat').chat;
-              padeditbar = require('/pad_editbar').padeditbar;
-              padimpexp = require('/pad_impexp').padimpexp;
-            }());
         </script>
+        <script type="text/javascript" src="js/socket.io.js"></script>
         
 </html>
