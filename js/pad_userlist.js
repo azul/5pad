@@ -658,7 +658,7 @@ var paduserlist = (function()
       if (box.length == 0)
       {
         // make guest prompt box
-        box = $('<div id="'+padutils.escapeHtml('guestprompt-' + encodedUserId) + '" class="guestprompt"><div class="choices"><a href="' + padutils.escapeHtml('javascript:void(require('+JSON.stringify(module.id)+').paduserlist.answerGuestPrompt(' + JSON.stringify(encodedUserId) + ',false))')+'">Deny</a> <a href="' + padutils.escapeHtml('javascript:void(require('+JSON.stringify(module.id)+').paduserlist.answerGuestPrompt(' + JSON.stringify(encodedUserId) + ',true))') + '">Approve</a></div><div class="guestname"><strong>Guest:</strong> ' + padutils.escapeHtml(displayName) + '</div></div>');
+        box = $('<div id="'+padutils.escapeHtml('guestprompt-' + encodedUserId) + '" class="guestprompt"><div class="choices"><a href="' + padutils.escapeHtml('javascript:void(require("pad_userlist").paduserlist.answerGuestPrompt(' + JSON.stringify(encodedUserId) + ',false))')+'">Deny</a> <a href="' + padutils.escapeHtml('javascript:void(require("pad_userlist").paduserlist.answerGuestPrompt(' + JSON.stringify(encodedUserId) + ',true))') + '">Approve</a></div><div class="guestname"><strong>Guest:</strong> ' + padutils.escapeHtml(displayName) + '</div></div>');
         $("#guestprompts").append(box);
       }
       else
