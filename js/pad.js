@@ -909,7 +909,7 @@ var pad = {
   },
   preloadImages: function()
   {
-    var images = ["../static/img/connectingbar.gif"];
+    var images = ["/img/connectingbar.gif"];
 
     function loadNextImage()
     {
