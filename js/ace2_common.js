@@ -1,3 +1,4 @@
+define(function(require, exports, module) { 
 /**
  * This code is mostly from the old Etherpad. Please help us to comment this code. 
  * This helps other people to understand this code better and helps them to improve it.
@@ -20,7 +21,7 @@
  * limitations under the License.
  */
 
-var Security = require('/security');
+var Security = require('security');
 
 function isNodeText(node)
 {
@@ -160,3 +161,4 @@ exports.htmlPrettyEscape = htmlPrettyEscape;
 exports.map = map;
 exports.noop = noop;
 exports.identity = identity;
+});

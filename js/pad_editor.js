@@ -1,3 +1,4 @@
+define(function(require, exports, module) { 
 /**
  * This code is mostly from the old Etherpad. Please help us to comment this code. 
  * This helps other people to understand this code better and helps them to improve it.
@@ -20,8 +21,8 @@
  * limitations under the License.
  */
 
-var padcookie = require('/pad_cookie').padcookie;
-var padutils = require('/pad_utils').padutils;
+var padcookie = require('pad_cookie').padcookie;
+var padutils = require('pad_utils').padutils;
 
 var padeditor = (function()
 {
@@ -34,7 +35,7 @@ var padeditor = (function()
     viewZoom: 100,
     init: function(readyFunc, initialViewOptions, _pad)
     {
-      Ace2Editor = require('/ace').Ace2Editor;
+      Ace2Editor = require('ace').Ace2Editor;
       pad = _pad;
       settings = pad.settings;
 
@@ -161,3 +162,4 @@ var padeditor = (function()
 }());
 
 exports.padeditor = padeditor;
+});

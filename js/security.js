@@ -1,3 +1,4 @@
+define(function(require, exports, module) { 
 /**
  * Copyright 2009 Google Inc.
  *
@@ -52,3 +53,4 @@ function escapeJavaScriptData(text) {
 exports.escapeHTML = escapeHTML;
 exports.escapeHTMLAttribute = escapeHTMLAttribute;
 exports.escapeJavaScriptData = escapeJavaScriptData;
+});

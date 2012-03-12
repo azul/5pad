@@ -1,3 +1,4 @@
+define(function(require, exports, module) { 
 var require = (function () {
 /*!
 
@@ -652,3 +653,4 @@ var require = (function () {
 
   return rootRequire;
 }());
+});

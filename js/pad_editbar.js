@@ -1,3 +1,4 @@
+define(function(require, exports, module) { 
 /**
  * This code is mostly from the old Etherpad. Please help us to comment this code. 
  * This helps other people to understand this code better and helps them to improve it.
@@ -20,9 +21,9 @@
  * limitations under the License.
  */
 
-var padutils = require('/pad_utils').padutils;
-var padeditor = require('/pad_editor').padeditor;
-var padsavedrevs = require('/pad_savedrevs').padsavedrevs;
+var padutils = require('pad_utils').padutils;
+var padeditor = require('pad_editor').padeditor;
+var padsavedrevs = require('pad_savedrevs').padsavedrevs;
 
 function indexOf(array, value) {
   for (var i = 0, ii = array.length; i < ii; i++) {
@@ -254,3 +255,4 @@ var padeditbar = (function()
 }());
 
 exports.padeditbar = padeditbar;
+});

@@ -1,3 +1,4 @@
+define(function(require, exports, module) { 
 /**
  * StyleFix 1.0.1
  * @author Lea Verou
@@ -419,3 +420,4 @@ StyleFix.register(self.prefixCSS);
 
 
 })(document.documentElement);
+});

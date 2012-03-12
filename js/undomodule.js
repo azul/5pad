@@ -1,3 +1,4 @@
+define(function(require, exports, module) { 
 /**
  * This code is mostly from the old Etherpad. Please help us to comment this code. 
  * This helps other people to understand this code better and helps them to improve it.
@@ -20,8 +21,8 @@
  * limitations under the License.
  */
 
-var Changeset = require('/Changeset');
-var extend = require('/ace2_common').extend;
+var Changeset = require('Changeset');
+var extend = require('ace2_common').extend;
 
 var undoModule = (function()
 {
@@ -333,3 +334,4 @@ var undoModule = (function()
 })();
 
 exports.undoModule = undoModule;
+});

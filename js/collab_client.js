@@ -1,3 +1,4 @@
+define(function(require, exports, module) { 
 /**
  * This code is mostly from the old Etherpad. Please help us to comment this code. 
  * This helps other people to understand this code better and helps them to improve it.
@@ -20,7 +21,7 @@
  * limitations under the License.
  */
 
-var chat = require('/chat').chat;
+var chat = require('chat').chat;
 
 // Dependency fill on init. This exists for `pad.socket` only.
 // TODO: bind directly to the socket.
@@ -704,3 +705,4 @@ function selectElementContents(elem)
 
 exports.getCollabClient = getCollabClient;
 exports.selectElementContents = selectElementContents;
+});

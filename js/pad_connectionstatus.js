@@ -1,3 +1,4 @@
+define(function(require, exports, module) { 
 /**
  * This code is mostly from the old Etherpad. Please help us to comment this code. 
  * This helps other people to understand this code better and helps them to improve it.
@@ -20,7 +21,7 @@
  * limitations under the License.
  */
 
-var padmodals = require('/pad_modals').padmodals;
+var padmodals = require('pad_modals').padmodals;
 
 var padconnectionstatus = (function()
 {
@@ -89,3 +90,4 @@ var padconnectionstatus = (function()
 }());
 
 exports.padconnectionstatus = padconnectionstatus;
+});

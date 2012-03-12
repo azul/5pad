@@ -1,3 +1,4 @@
+define(function(require, exports, module) { 
 /**
  * This code is mostly from the old Etherpad. Please help us to comment this code. 
  * This helps other people to understand this code better and helps them to improve it.
@@ -20,8 +21,8 @@
  * limitations under the License.
  */
 
-var padutils = require('/pad_utils').padutils;
-var paddocbar = require('/pad_docbar').paddocbar;
+var padutils = require('pad_utils').padutils;
+var paddocbar = require('pad_docbar').paddocbar;
 
 var padmodals = (function()
 {
@@ -372,3 +373,4 @@ var padmodals = (function()
 }());
 
 exports.padmodals = padmodals;
+});
