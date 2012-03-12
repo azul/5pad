@@ -3,7 +3,7 @@ require.config({
   baseUrl: '/js'
 });
 var clientVars = {};
-require(['pad'], function (pad) {
+require(['pad', 'jquery'], function (pad, $) {
   //require('/pad').init();
 
   // var padutils = require('/pad_utils').padutils;
