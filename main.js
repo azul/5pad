@@ -17,7 +17,7 @@ require(['pad', 'jquery'], function (pad, $) {
     });
 
   /* TODO: These globals shouldn't exist. */
-  chat = require('/chat').chat;
-  padeditbar = require('/pad_editbar').padeditbar;
-  padimpexp = require('/pad_impexp').padimpexp;
+  chat = require('chat').chat;
+  padeditbar = require('pad_editbar').padeditbar;
+  padimpexp = require('pad_impexp').padimpexp;
 });
