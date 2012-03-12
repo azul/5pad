@@ -156,30 +156,12 @@ function Ace2Editor()
     return {embeded: embededFiles, remote: remoteFiles};
   }
   function pushRequireScriptTo(buffer) {
-    var KERNEL_SOURCE = '/js/require-kernel.js';
-    var KERNEL_BOOT = 'require.setRootURI("/js/");\nrequire.setGlobalKeyPath("require");'
-    if (Ace2Editor.EMBEDED && Ace2Editor.EMBEDED[KERNEL_SOURCE]) {
-      buffer.push('<script type="text/javascript">');
-      buffer.push(Ace2Editor.EMBEDED[KERNEL_SOURCE]);
-      buffer.push(KERNEL_BOOT);
-      buffer.push('<\/script>');
-    }
+    buffer.push('<script type="text/javascript" src="js/require-jquery.js" data-main="js/ace2_inner">');
+    buffer.push('<\/script>');
   }
   function pushScriptsTo(buffer) {
     /* Folling is for packaging regular expression. */
     /* $$INCLUDE_JS("/js/ace2_inner.js?callback=require.define"); */
-    var ACE_SOURCE = '/js/ace2_inner.js?callback=require.define';
-    if (Ace2Editor.EMBEDED && Ace2Editor.EMBEDED[ACE_SOURCE]) {
-      buffer.push('<script type="text/javascript">');
-      buffer.push(Ace2Editor.EMBEDED[ACE_SOURCE]);
-      buffer.push('require("ace2_inner");');
-      buffer.push('<\/script>');
-    } else {
-      buffer.push('<script type="application/javascript" src="' + ACE_SOURCE + '"><\/script>');
-      buffer.push('<script type="text/javascript">');
-      buffer.push('require("ace2_inner");');
-      buffer.push('<\/script>');
-    }
   }
   function pushStyleTagsFor(buffer, files) {
     var sorted = sortFilesByEmbeded(files);
