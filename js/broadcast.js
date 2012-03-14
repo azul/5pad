@@ -1,3 +1,4 @@
+define(function(require, exports, module) { 
 /**
  * This code is mostly from the old Etherpad. Please help us to comment this code. 
  * This helps other people to understand this code better and helps them to improve it.
@@ -20,12 +21,12 @@
  * limitations under the License.
  */
 
-var makeCSSManager = require('/cssmanager').makeCSSManager;
-var domline = require('/domline').domline;
-var AttribPool = require('/AttributePoolFactory').createAttributePool;
-var Changeset = require('/Changeset');
-var linestylefilter = require('/linestylefilter').linestylefilter;
-var colorutils = require('/colorutils').colorutils;
+var makeCSSManager = require('cssmanager').makeCSSManager;
+var domline = require('domline').domline;
+var AttribPool = require('AttributePoolFactory').createAttributePool;
+var Changeset = require('Changeset');
+var linestylefilter = require('linestylefilter').linestylefilter;
+var colorutils = require('colorutils').colorutils;
 var Ace2Common = require('./ace2_common');
 
 var map = Ace2Common.map;
@@ -692,3 +693,4 @@ function loadBroadcastJS(socket, sendSocketMsg, fireWhenAllScriptsAreLoaded, Bro
 }
 
 exports.loadBroadcastJS = loadBroadcastJS;
+});

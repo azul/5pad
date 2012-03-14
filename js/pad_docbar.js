@@ -1,3 +1,4 @@
+define(function(require, exports, module) { 
 /**
  * This code is mostly from the old Etherpad. Please help us to comment this code. 
  * This helps other people to understand this code better and helps them to improve it.
@@ -20,7 +21,7 @@
  * limitations under the License.
  */
 
-var padutils = require('/pad_utils').padutils;
+var padutils = require('pad_utils').padutils;
 
 var paddocbar = (function()
 {
@@ -449,7 +450,7 @@ var paddocbar = (function()
     handleResizePage: function()
     {
       // Side-step circular reference. This should be injected.
-      var padsavedrevs = require('/pad_savedrevs').padsavedrevs;
+      var padsavedrevs = require('pad_savedrevs').padsavedrevs;
       padsavedrevs.handleResizePage();
     },
     hideLaterIfNoOtherInteraction: function()
@@ -464,3 +465,4 @@ var paddocbar = (function()
 }());
 
 exports.paddocbar = paddocbar;
+});

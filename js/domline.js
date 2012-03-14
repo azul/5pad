@@ -1,3 +1,4 @@
+define(function(require, exports, module) { 
 /**
  * This code is mostly from the old Etherpad. Please help us to comment this code. 
  * This helps other people to understand this code better and helps them to improve it.
@@ -26,9 +27,9 @@
 // requires: plugins
 // requires: undefined
 
-var Security = require('/security');
-var Ace2Common = require('/ace2_common');
-var plugins = require('/plugins').plugins;
+var Security = require('security');
+var Ace2Common = require('ace2_common');
+var plugins = require('plugins').plugins;
 var map = Ace2Common.map;
 var noop = Ace2Common.noop;
 var identity = Ace2Common.identity;
@@ -285,3 +286,4 @@ domline.processSpaces = function(s, doesWrap)
 };
 
 exports.domline = domline;
+});

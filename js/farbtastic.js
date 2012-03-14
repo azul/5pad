@@ -1,3 +1,4 @@
+define(function(require, exports, module) { 
 // Farbtastic 2.0 alpha
 (function ($) {
   
@@ -522,3 +523,4 @@ $._farbtastic = function (container, options) {
 }
 
 })(jQuery);
+});

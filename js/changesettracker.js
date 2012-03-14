@@ -1,3 +1,4 @@
+define(function(require, exports, module) { 
 /**
  * This code is mostly from the old Etherpad. Please help us to comment this code. 
  * This helps other people to understand this code better and helps them to improve it.
@@ -20,8 +21,8 @@
  * limitations under the License.
  */
 
-var AttribPool = require('/AttributePoolFactory').createAttributePool;
-var Changeset = require('/Changeset');
+var AttribPool = require('AttributePoolFactory').createAttributePool;
+var Changeset = require('Changeset');
 
 function makeChangesetTracker(scheduler, apool, aceCallbacksProvider)
 {
@@ -211,3 +212,4 @@ function makeChangesetTracker(scheduler, apool, aceCallbacksProvider)
 }
 
 exports.makeChangesetTracker = makeChangesetTracker;
+});

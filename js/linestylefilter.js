@@ -1,3 +1,4 @@
+define(function(require, exports, module) { 
 /**
  * This code is mostly from the old Etherpad. Please help us to comment this code. 
  * This helps other people to understand this code better and helps them to improve it.
@@ -28,9 +29,9 @@
 // requires: plugins
 // requires: undefined
 
-var Changeset = require('/Changeset');
-var plugins = require('/plugins').plugins;
-var map = require('/ace2_common').map;
+var Changeset = require('Changeset');
+var plugins = require('plugins').plugins;
+var map = require('ace2_common').map;
 
 var linestylefilter = {};
 
@@ -343,3 +344,4 @@ linestylefilter.populateDomLine = function(textLine, aline, apool, domLineObj)
 };
 
 exports.linestylefilter = linestylefilter;
+});

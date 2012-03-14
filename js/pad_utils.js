@@ -1,3 +1,4 @@
+define(function(require, exports, module) { 
 /**
  * This code is mostly from the old Etherpad. Please help us to comment this code. 
  * This helps other people to understand this code better and helps them to improve it.
@@ -20,7 +21,7 @@
  * limitations under the License.
  */
 
-var Security = require('/security');
+var Security = require('security');
 
 /**
  * Generates a random String with the given length. Is needed to generate the Author, Group, readonly, session Ids
@@ -75,7 +76,7 @@ var padutils = {
   },
   uniqueId: function()
   {
-    var pad = require('/pad').pad; // Sidestep circular dependency
+    var pad = require('pad').pad; // Sidestep circular dependency
     function encodeNum(n, width)
     {
       // returns string that is exactly 'width' chars, padding with zeros
@@ -250,7 +251,7 @@ var padutils = {
   },
   timediff: function(d)
   {
-    var pad = require('/pad').pad; // Sidestep circular dependency
+    var pad = require('pad').pad; // Sidestep circular dependency
     function format(n, word)
     {
       n = Math.round(n);
@@ -520,9 +521,10 @@ function setupGlobalExceptionHandler() {
 
 padutils.setupGlobalExceptionHandler = setupGlobalExceptionHandler;
 
-padutils.binarySearch = require('/ace2_common').binarySearch;
+padutils.binarySearch = require('ace2_common').binarySearch;
 
 exports.randomString = randomString;
 exports.createCookie = createCookie;
 exports.readCookie = readCookie;
 exports.padutils = padutils;
+});

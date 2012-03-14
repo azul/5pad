@@ -1,3 +1,4 @@
+define(function(require, exports, module) {
 /**
  * This code is mostly from the old Etherpad. Please help us to comment this code. 
  * This helps other people to understand this code better and helps them to improve it.
@@ -24,29 +25,29 @@
 
 var socket;
 
-require('/jquery');
-require('/farbtastic');
-require('/excanvas');
-JSON = require('/json2');
-require('/undo-xpopup');
-require('/prefixfree');
+require('jquery');
+require('farbtastic');
+require('excanvas');
+JSON = require('json2');
+require('undo-xpopup');
+require('prefixfree');
 
-var chat = require('/chat').chat;
-var getCollabClient = require('/collab_client').getCollabClient;
-var padconnectionstatus = require('/pad_connectionstatus').padconnectionstatus;
-var padcookie = require('/pad_cookie').padcookie;
-var paddocbar = require('/pad_docbar').paddocbar;
-var padeditbar = require('/pad_editbar').padeditbar;
-var padeditor = require('/pad_editor').padeditor;
-var padimpexp = require('/pad_impexp').padimpexp;
-var padmodals = require('/pad_modals').padmodals;
-var padsavedrevs = require('/pad_savedrevs').padsavedrevs;
-var paduserlist = require('/pad_userlist').paduserlist;
-var padutils = require('/pad_utils').padutils;
+var chat = require('chat').chat;
+var getCollabClient = require('collab_client').getCollabClient;
+var padconnectionstatus = require('pad_connectionstatus').padconnectionstatus;
+var padcookie = require('pad_cookie').padcookie;
+var paddocbar = require('pad_docbar').paddocbar;
+var padeditbar = require('pad_editbar').padeditbar;
+var padeditor = require('pad_editor').padeditor;
+var padimpexp = require('pad_impexp').padimpexp;
+var padmodals = require('pad_modals').padmodals;
+var padsavedrevs = require('pad_savedrevs').padsavedrevs;
+var paduserlist = require('pad_userlist').paduserlist;
+var padutils = require('pad_utils').padutils;
 
-var createCookie = require('/pad_utils').createCookie;
-var readCookie = require('/pad_utils').readCookie;
-var randomString = require('/pad_utils').randomString;
+var createCookie = require('pad_utils').createCookie;
+var readCookie = require('pad_utils').readCookie;
+var randomString = require('pad_utils').randomString;
 
 function getParams()
 {
@@ -263,13 +264,13 @@ function handshake(url, resource, padId)
       {
         $("#editorloadingbox").html("<b>You need a password to access this pad</b><br>" +
                                     "<input id='passwordinput' type='password' name='password'>"+
-                                    "<button type='button' onclick=\"" + padutils.escapeHtml('require('+JSON.stringify(module.id)+").savePassword()") + "\">ok</button>");
+                                    "<button type='button' onclick=\"require(pad).savePassword();\">ok</button>");
       }
       else if(obj.accessStatus == "wrongPassword")
       {
         $("#editorloadingbox").html("<b>You're password was wrong</b><br>" +
                                     "<input id='passwordinput' type='password' name='password'>"+
-                                    "<button type='button' onclick=\"" + padutils.escapeHtml('require('+JSON.stringify(module.id)+").savePassword()") + "\">ok</button>");
+                                    "<button type='button' onclick=\"require(pad).savePassword();\">ok</button>");
       }
     }
     
@@ -1007,3 +1008,5 @@ exports.pad = pad;
 exports.init = init;
 exports.alertBar = alertBar;
 
+
+});

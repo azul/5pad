@@ -1,3 +1,4 @@
+define(function(require, exports, module) { 
 /**
  * This code is mostly from the old Etherpad. Please help us to comment this code. 
  * This helps other people to understand this code better and helps them to improve it.
@@ -502,3 +503,4 @@ function loadBroadcastSliderJS(fireWhenAllScriptsAreLoaded)
 }
 
 exports.loadBroadcastSliderJS = loadBroadcastSliderJS;
+});

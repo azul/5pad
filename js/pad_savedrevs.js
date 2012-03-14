@@ -1,3 +1,4 @@
+define(function(require, exports, module) { 
 /**
  * This code is mostly from the old Etherpad. Please help us to comment this code. 
  * This helps other people to understand this code better and helps them to improve it.
@@ -20,8 +21,8 @@
  * limitations under the License.
  */
 
-var padutils = require('/pad_utils').padutils;
-var paddocbar = require('/pad_docbar').paddocbar;
+var padutils = require('pad_utils').padutils;
+var paddocbar = require('pad_docbar').paddocbar;
 
 var padsavedrevs = (function()
 {
@@ -41,7 +42,7 @@ var padsavedrevs = (function()
     box.find(".srauthor").html("by " + padutils.escapeHtml(revisionInfo.savedBy));
     var viewLink = '/ep/pad/view/' + pad.getPadId() + '/' + revisionInfo.id;
     box.find(".srview").attr('href', viewLink);
-    var restoreLink = 'javascript:void(require('+JSON.stringify(module.id)+').padsavedrevs.restoreRevision(' + JSON.stringify(rnum) + ');';
+    var restoreLink = 'javascript:void(require("pad_savedrevs").padsavedrevs.restoreRevision(' + JSON.stringify(rnum) + ');';
     box.find(".srrestore").attr('href', restoreLink);
     box.find(".srname").click(function(evt)
     {
@@ -524,3 +525,4 @@ var padsavedrevs = (function()
 }());
 
 exports.padsavedrevs = padsavedrevs;
+});

@@ -63,7 +63,7 @@
               box-shadow: inset 0 1px 12px rgba(0,0,0,0.9);
               background: #444;
             }
-            #label {
+            .label {
               text-align: left;
               text-shadow: 0 1px 1px #fff;
               margin: 16px auto 0;
@@ -110,7 +110,7 @@
               #inner {
                 width: 95%;        
               }
-              #label {
+              .label {
                 text-align: center;
               }
             }
@@ -120,10 +120,14 @@
         <div id="wrapper">
             <div id="inner">
                 <div id="button" onclick="go2Random()" class="translate">New Pad</div>
-                <div id="label" class="translate">or create/open a Pad with the name</div> 
+                <div class="label" class="translate">or create/open a Pad with the name</div> 
                 <form action="#" onsubmit="go2Name();return false;"> 
-                    <input type="text" id="padname" autofocus x-webkit-speech> 
+                    <input type="text" id="padname" autofocus x-webkit-speech /> 
                     <button type="submit">OK</button>
+                </form>
+                <div class="label">on</div>
+                <form>
+                  <input type="text" id="server" />
                 </form>
             </div>
         </div>
@@ -132,18 +136,22 @@
         <script> 
             function go2Name() 
             {
+                var server = document.getElementById("server").value;
                 var padname = document.getElementById("padname").value;
                 if(padname.length == 0){
                   alert("Please enter a name");
                   return;
                 }
                 localStorage.padName = padname;
+                localStorage.etherpadServer = server;
                 window.location = 'pad.html';
             }
  
             function go2Random() 
             {
+                var server = document.getElementById("server").value;
                 localStorage.padName = randomPadName();
+                localStorage.etherpadServer = server;
                 window.location = 'pad.html';
             }
  
