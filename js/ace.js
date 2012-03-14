@@ -156,7 +156,7 @@ function Ace2Editor()
     return {embeded: embededFiles, remote: remoteFiles};
   }
   function pushRequireScriptTo(buffer) {
-    buffer.push('<script type="text/javascript" src="js/require-jquery.js" data-main="js/ace2_inner">');
+    buffer.push('<script type="text/javascript" src="js/require-jquery.js" data-main="inner.js">');
     buffer.push('<\/script>');
   }
   function pushScriptsTo(buffer) {
