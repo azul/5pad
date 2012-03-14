@@ -136,15 +136,19 @@
         <script> 
             function go2Name() 
             {
-                var server = document.getElementById("server").value;
-                var padname = document.getElementById("padname").value;
-                if(padname.length == 0){
-                  alert("Please enter a name");
-                  return;
-                }
-                localStorage.padName = padname;
-                localStorage.etherpadServer = server;
-                window.location = 'pad.html';
+              var server = document.getElementById("server").value;
+              if(server.length < 4){
+                alert("Please specify a server to use");
+                return;
+              }
+              var padname = document.getElementById("padname").value;
+              if(padname.length == 0){
+                alert("Please enter a name");
+                return;
+              }
+              localStorage.padName = padname;
+              localStorage.etherpadServer = server;
+              window.location = 'pad.html';
             }
  
             function go2Random() 
