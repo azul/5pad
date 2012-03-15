@@ -13,7 +13,7 @@ if(server.lastIndexOf(':') < 7) server = server + ':80';
 var clientVars = {};
 var socket_lib = server + '/socket.io/socket.io.js';
 
-require([socket_lib, 'pad', 'jquery'], function (io, pad, $) {
+require([socket_lib, 'jquery', 'pad'], function (io, $, pad_require) {
   //require('/pad').init();
 
   // var padutils = require('/pad_utils').padutils;
@@ -23,10 +23,11 @@ require([socket_lib, 'pad', 'jquery'], function (io, pad, $) {
   $(document).ready(function()
     {
       // require('/pad').getParams();
-      pad.handshake(server, 'socket.io', padName);
+      pad_require.handshake(server, 'socket.io', padName);
     });
 
   /* TODO: These globals shouldn't exist. */
+  pad = require('pad').pad;
   chat = require('chat').chat;
   padeditbar = require('pad_editbar').padeditbar;
   padimpexp = require('pad_impexp').padimpexp;
