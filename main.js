@@ -1,10 +1,27 @@
 
 require.config({
-  baseUrl: '/js'
+  baseUrl: '/js',
+  
 });
+
+require.onError = function(err) {
+  if (err.requireType === 'timeout' && err.requireModules.indexOf("socket.io") != -1) {
+    alert("Could not find socket on '"+localStorage.etherpadServer+"'. Please make sure it's an etherpad-lite server.");
+    window.location = '/index.html';
+    return;
+  }
+  throw(err);
+}
+
 
 var server = localStorage.etherpadServer;
 var padName = localStorage.padName;
+
+// basic check of input
+if(!server || server.lenght < 4 || !padName || padName.length < 1) {
+  window.location = '/index.html';
+}
+
 // set some defaults - http port 80
 // TODO: use url for this.
 if(server.indexOf('http') != 0) server = "http://" + server;
